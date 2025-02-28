@@ -1,0 +1,51 @@
+<!-- dashboard-content.html -->
+<main class="main-content" id="content">
+    <h1>DASHBOARD</h1>
+    <section class="summary-cards">
+        <div class="card inventory">
+            <p>Total Items</p>
+            <h2>1,345</h2>
+            <a href="#">View detail ></a>
+        </div>
+        <div class="card low-stock">
+            <p>Low-Stock Alerts</p>
+            <h2>12</h2>
+            <a href="#">View detail ></a>
+        </div>
+        <div class="card delivered">
+            <p>To be delivered</p>
+            <h2>200</h2>
+            <a href="#">View detail ></a>
+        </div>
+        <div class="card ordered">
+            <p>To be ordered</p>
+            <h2>120</h2>
+            <a href="#">View detail ></a>
+        </div>
+    </section>
+
+    <section class="plans-warehouse">
+        <div class="month-plans">
+            <h3>Month Plans</h3>
+            <ul>
+                <li><span>Enero</span><span>Todo</span></li>
+                <li><span>Noviembre</span><span>Processing</span></li>
+                <li><span>Diciembre</span><span>Completed</span></li>
+            </ul>
+        </div>
+
+        <div class="warehouse-detail">
+            <h3>Warehouse Detail</h3>
+            <p>Total Items</p>
+            <h2>1,345</h2>
+
+            <!-- Gráfica circular -->
+            <canvas id="salesChart" style="height: 400px; width: 100%;"></canvas>
+
+            <ul>
+                <li><span>Enero a junio</span><span>1,000 items</span></li>
+                <li><span>Julio a diciembre</span><span>345 items</span></li>
+            </ul>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegation</title>
+    <link rel="stylesheet" href="navegation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="img/logo.png" alt="Grafico">
+                <span>Visionary Insights</span>
+            </div>
+            <ul>
+                <li><a href="#" onclick="loadPage('../DashBoard/dashboard.html')">Dashboard</a></li>
+                <li><a href="#" onclick="loadPage('../Views/Charts/charts.html')">Gráficos</a></li>
+                <li><a href="#" onclick="loadPage('../Views/Sales/sales.html')">Ventas</a></li>
+                <li><a href="#" onclick="loadPage('../Views/About/About.html')">About</a></li>
+            </ul>
+
+            <div class="user-options">
+                <div class="user-profile" id="user-profile">
+                    <img src="img/user.jpg" alt="User">
+                    <button class="dropdown-button" id="dropdownButton">▼</button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#" id="logoutButton">Log Out</a>
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+        
+    </header>
+
+    <div class="scrol"></div>
+
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="4k Video ｜ Technology Looped Background ｜ No Copyright Loop Background Video.mp4" type="video/mp4">
+    </video>
+
+    <main class="main-content" id="content">
+        <!-- El contenido de dashboard.html se cargará aquí -->
+         
+    </main>
+
+    <script src="../DashBoard/dashboard.js"></script>
+
+    <script src="navegation.js"></script>
+    <script>
+        // Cargar el contenido de dashboard.html al iniciar
+        loadPage('../DashBoard/dashboard.html');
+    </script>
+</body>
+</html>

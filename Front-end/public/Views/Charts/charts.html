@@ -1,0 +1,36 @@
+<main class="main-content">
+    <h1>Ventas por País - 2024</h1>
+
+    <!-- Selector de país -->
+    <section class="filter-options">
+        <label for="countrySelect">Selecciona un país:</label>
+        <select id="countrySelect">
+            <option value="Australia">Australia</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Canadá">Canadá</option>
+            <option value="China">China</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Francia">Francia</option>
+            <option value="Alemania">Alemania</option>
+            <option value="Italia">Italia</option>
+            <option value="Japón">Japón</option>
+            <option value="Sudáfrica">Sudáfrica</option>
+            <option value="Reino Unido">Reino Unido</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+        </select>
+    </section>
+
+    <!-- Contenedor principal -->
+    <div class="content-container">
+        <!-- Contenedor para la gráfica -->
+        <div class="chart-container">
+            <canvas id="predictionsChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Contenedor para el texto descriptivo -->
+        <div class="text-container" id="chartDescription">
+            <h2>Descripción</h2>
+            <p>Selecciona un país para ver su descripción.</p>
+        </div>
+    </div>
+</main>

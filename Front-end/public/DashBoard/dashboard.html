@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <main class="main-content" id="content">
+        <h1>DASHBOARD</h1>
+        <section class="summary-cards">
+            <div class="card inventory">
+                <p>Total Datos</p>
+                <h2>15,686</h2>
+                <a href="/download/csv">Download xlsx></a>
+            </div>
+            <div class="card low-stock">
+                <p>Grafica</p>
+                <h2>12 Meses</h2>
+                <a href="#" onclick="downloadChartImage()">download></a> <!-- Llama a la función para descargar la imagen -->
+            </div>
+        </section>
+
+        <section class="plans-warehouse">
+            <div class="month-plans">
+                <h3>Month Plans</h3>
+                <ul>
+                    <li>
+                        <span>Enero</span>
+                        <span class="value" data-month="Enero">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Febrero</span>
+                        <span class="value" data-month="Febrero">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Marzo</span>
+                        <span class="value" data-month="Marzo">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Abril</span>
+                        <span class="value" data-month="Abril">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Mayo</span>
+                        <span class="value" data-month="Mayo">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Junio</span>
+                        <span class="value" data-month="Junio">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Julio</span>
+                        <span class="value" data-month="Julio">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Agosto</span>
+                        <span class="value" data-month="Agosto">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Septiembre</span>
+                        <span class="value" data-month="Septiembre">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Octubre</span>
+                        <span class="value" data-month="Octubre">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Noviembre</span>
+                        <span class="value" data-month="Noviembre">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                    <li>
+                        <span>Diciembre</span>
+                        <span class="value" data-month="Diciembre">0</span>
+                        <div class="progress" style="width: 10%; height: 8px; background-color: #4CAF50;"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="warehouse-detail">
+                <h3>Warehouse Detail</h3>
+                <p>Total Datos</p>
+                <h2>15,686</h2>
+
+                <canvas id="salesChart" style="height: 400px; width: 100%;"></canvas>
+
+                <ul id="warehouse-list">
+
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

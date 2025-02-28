@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas Totales por País</title>
+    <link rel="stylesheet" href="/sales.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <main class="main-content">
+        <h1>Desempeño de Ventas: Análisis 2023 y Proyecciones 2024</h1>
+
+        <!-- Opciones de filtro para ver datos de todos los meses, pares o impares -->
+        <section class="filter-options">
+            <button class="filter-btn" id="btnAll">Mostrar Todo</button>
+            <button class="filter-btn" id="btnPredictions">Mostrar Predicciones</button>
+            <button class="filter-btn" id="btnTotalSales">Mostrar Ventas Totales</button>
+            <button class="filter-btn" id="btnRegression">Mostrar Regresión Lineal</button>
+
+        </section>
+
+        <!-- Contenedor de dos columnas: gráfico y cuadro de texto -->
+        <div class="content-container">
+            <!-- Columna para el gráfico -->
+            <div class="chart-container">
+                <canvas id="salesChart" width="400" height="200"></canvas>
+            </div>
+
+            <!-- Columna para el cuadro de texto -->
+            <div class="text-container">
+                <h2>Descripción del Análisis</h2>
+                <p>Este análisis proporciona una visión detallada del desempeño de ventas por país durante el 2023, junto con proyecciones para el 2024. La gráfica a la izquierda muestra las tendencias de ventas totales y predicciones futuras basadas en datos históricos.</p>
+                <p>Puedes usar los botones de filtro para visualizar solo las predicciones o las ventas totales mensuales, lo que facilita un análisis más específico según las necesidades del negocio.</p>
+            </div>
+        </div>
+
+        <!-- Tabla de ventas -->
+        <table id="salesTable">
+            <thead>
+                <tr>
+                    <th>Mes</th>
+                    <th>Ventas Totales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos se agregarán aquí mediante JavaScript -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Script para cargar y configurar el gráfico -->
+    <script src="/sales.js"></script>
+</body>
+</html>
