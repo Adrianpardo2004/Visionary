@@ -1,7 +1,19 @@
 FROM node:18
+
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
-COPY package*.json ./
-RUN node server.js
-COPY . .
+
+# Copia solo los archivos necesarios del backend
+COPY back-end/package*.json ./ 
+
+# Instala dependencias
+RUN npm install
+
+# Copia todo el backend
+COPY back-end/ .
+
+# Expone el puerto
 EXPOSE 3000
-CMD ["node", "start"]
+
+# Comando para iniciar tu servidor
+CMD ["node", "server.js"]
