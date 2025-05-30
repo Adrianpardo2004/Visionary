@@ -2,10 +2,16 @@ FROM node:18
 
 WORKDIR /app
 
-COPY Back-end/package*.json ./
-RUN npm install
+# Copiar e instalar dependencias del backend
+COPY Back-end/package*.json ./Back-end/
+RUN cd Back-end && npm install
 
-COPY Back-end/ .
+# Copiar backend y frontend
+COPY Back-end/ ./Back-end/
+COPY Front-end/public/ ./Front-end/public/
 
+# Exponer el puerto del backend
 EXPOSE 3000
-CMD ["node", "server.js"]
+
+# Ejecutar el servidor
+CMD ["node", "Back-end/server.js"]
