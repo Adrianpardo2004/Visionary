@@ -6,9 +6,11 @@ WORKDIR /app
 COPY Back-end/package*.json ./Back-end/
 RUN cd Back-end && npm install
 
-# Copiar backend y frontend
+# Copiar backend completo
 COPY Back-end/ ./Back-end/
-COPY Front-end/public/ ./Front-end/public/
+
+# Copiar frontend manteniendo la estructura que espera el server
+COPY Front-end/ ./Front-end/
 
 # Exponer el puerto del backend
 EXPOSE 3000
